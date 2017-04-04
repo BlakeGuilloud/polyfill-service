@@ -89,7 +89,7 @@
 	};
 	Set.prototype['entries'] =
 	Set.prototype[Symbol.iterator] = function() {
-		return makeIterator(this, function(i) { return [decodeVal(this._values[i]), decodeVal(this._values[i])]; });
+		return makeIterator(this, function(i) { return decodeVal(this._values[i]); });
 	};
 	Set.prototype['forEach'] = function(callbackFn, thisArg) {
 		thisArg = thisArg || global;
